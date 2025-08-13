@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejercicios de Algoritmos - JavaScript</h1>
+    </header>
+
+    <main>
+        <!-- Menú Principal -->
+        <div id="menu" class="screen active">
+            <h2>Selecciona un ejercicio:</h2>
+            <div class="menu-buttons">
+                <button onclick="showScreen('suma')">1. Suma de dos números</button>
+                <button onclick="showScreen('promedio')">2. Promedio de 3 números</button>
+                <button onclick="showScreen('edad')">3. Edad en días</button>
+                <button onclick="showScreen('minutos')">4. Minutos en un año</button>
+                <button onclick="showScreen('impuesto')">5. Precio con impuesto</button>
+            </div>
+        </div>
+
+        <!-- Ejercicio 1: Suma de dos números -->
+        <div id="suma" class="screen">
+            <h2>Suma de dos números</h2>
+            <div class="form-group">
+                <label for="num1">Primer número:</label>
+                <input type="number" id="num1" placeholder="Ingresa el primer número">
+            </div>
+            <div class="form-group">
+                <label for="num2">Segundo número:</label>
+                <input type="number" id="num2" placeholder="Ingresa el segundo número">
+            </div>
+            <button onclick="calcularSuma()">Calcular Suma</button>
+            <div id="resultado-suma" class="resultado"></div>
+            <button class="back-btn" onclick="showScreen('menu')">Volver al menú</button>
+        </div>
+
+        <!-- Ejercicio 2: Promedio de 3 números -->
+        <div id="promedio" class="screen">
+            <h2>Promedio de 3 números</h2>
+            <div class="form-group">
+                <label for="prom1">Primer número:</label>
+                <input type="number" id="prom1" placeholder="Ingresa el primer número">
+            </div>
+            <div class="form-group">
+                <label for="prom2">Segundo número:</label>
+                <input type="number" id="prom2" placeholder="Ingresa el segundo número">
+            </div>
+            <div class="form-group">
+                <label for="prom3">Tercer número:</label>
+                <input type="number" id="prom3" placeholder="Ingresa el tercer número">
+            </div>
+            <button onclick="calcularPromedio()">Calcular Promedio</button>
+            <div id="resultado-promedio" class="resultado"></div>
+            <button class="back-btn" onclick="showScreen('menu')">Volver al menú</button>
+        </div>
+
+        <!-- Ejercicio 3: Edad en días -->
+        <div id="edad" class="screen">
+            <h2>Calcular edad en días</h2>
+            <div class="form-group">
+                <label for="anos">Edad en años:</label>
+                <input type="number" id="anos" placeholder="Ingresa tu edad en años">
+            </div>
+            <button onclick="calcularEdadDias()">Calcular días</button>
+            <div id="resultado-edad" class="resultado"></div>
+            <button class="back-btn" onclick="showScreen('menu')">Volver al menú</button>
+        </div>
+
+        <!-- Ejercicio 4: Minutos en un año -->
+        <div id="minutos" class="screen">
+            <h2>Minutos en un año</h2>
+            <p>Calcula el total de minutos que tiene un año.</p>
+            <button onclick="calcularMinutosAno()">Calcular minutos</button>
+            <div id="resultado-minutos" class="resultado"></div>
+            <button class="back-btn" onclick="showScreen('menu')">Volver al menú</button>
+        </div>
+
+        <!-- Ejercicio 5: Precio con impuesto -->
+        <div id="impuesto" class="screen">
+            <h2>Precio con impuesto del 19%</h2>
+            <div class="form-group">
+                <label for="precio">Precio del producto:</label>
+                <input type="number" id="precio" step="0.01" placeholder="Ingresa el precio">
+            </div>
+            <button onclick="calcularPrecioConImpuesto()">Calcular precio final</button>
+            <div id="resultado-impuesto" class="resultado"></div>
+            <button class="back-btn" onclick="showScreen('menu')">Volver al menú</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
